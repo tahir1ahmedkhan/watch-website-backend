@@ -89,7 +89,7 @@ A comprehensive TypeScript backend for the watch store application with user aut
    
    # Default Admin Credentials
    ADMIN_EMAIL=admin@watchstore.com
-   ADMIN_PASSWORD=admin123
+   ADMIN_PASSWORD=admin123456
    
    JWT_SECRET=your-super-secret-jwt-key-here
    JWT_EXPIRES_IN=7d
