@@ -78,18 +78,25 @@ app.use((error: any, req: express.Request, res: express.Response, next: express.
 // Start server
 const startServer = async () => {
   try {
+    console.log('🔧 Starting Watch Store API Server...');
+    console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`);
+    console.log(`📍 Port: ${PORT}`);
+    
     // Connect to database
     await connectDatabase();
     
     // Start listening
     app.listen(PORT, () => {
+      console.log('='.repeat(50));
       console.log(`🚀 Server running on port ${PORT}`);
       console.log(`📱 Frontend URL: ${process.env.FRONTEND_URL || 'http://localhost:3000'}`);
       console.log(`🔗 API Base URL: http://localhost:${PORT}/api`);
       console.log(`📊 Health Check: http://localhost:${PORT}/api/health`);
+      console.log(`⏰ Started at: ${new Date().toISOString()}`);
+      console.log('='.repeat(50));
     });
   } catch (error) {
-    console.error('Failed to start server:', error);
+    console.error('❌ Failed to start server:', error);
     process.exit(1);
   }
 };

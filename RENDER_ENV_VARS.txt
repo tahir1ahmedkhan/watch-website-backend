@@ -1,0 +1,50 @@
+========================================
+RENDER.COM ENVIRONMENT VARIABLES
+Copy these to Render Dashboard
+========================================
+
+NODE_ENV=production
+
+PORT=10000
+
+MONGODB_URI=mongodb+srv://your-username:your-password@cluster0.xxxxx.mongodb.net/watch-store?retryWrites=true&w=majority
+
+JWT_SECRET=GENERATE_WITH_openssl_rand_base64_32
+
+JWT_EXPIRES_IN=7d
+
+FRONTEND_URL=https://your-frontend.vercel.app
+
+ADMIN_EMAIL=admin@watchstore.com
+
+ADMIN_PASSWORD=YourSecurePassword123!
+
+SUPABASE_URL=https://your-project.supabase.co
+
+SUPABASE_ANON_KEY=your-supabase-anon-key-from-dashboard
+
+SUPABASE_SERVICE_ROLE_KEY=your-supabase-service-role-key-from-dashboard
+
+SUPABASE_BUCKET_NAME=watch-website-images
+
+========================================
+IMPORTANT NOTES:
+========================================
+
+1. Generate JWT_SECRET with:
+   openssl rand -base64 32
+
+2. Get MongoDB URI from:
+   MongoDB Atlas → Connect → Connect your application
+
+3. Get Supabase keys from:
+   Supabase Dashboard → Settings → API
+
+4. Update FRONTEND_URL after deploying to Vercel
+
+5. Change ADMIN_PASSWORD to something secure!
+
+6. MongoDB Atlas: Whitelist IP 0.0.0.0/0
+   (Network Access → Add IP Address → Allow Access from Anywhere)
+
+========================================

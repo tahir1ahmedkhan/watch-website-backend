@@ -13,11 +13,14 @@
     "test": "jest",
     "seed": "ts-node src/scripts/seedDatabase.ts",
     "seed:admin": "ts-node src/scripts/seedAdmin.ts",
+    "seed:prod": "node dist/scripts/seedAll.js",
     "setup": "node setup.js",
     "clean": "rimraf dist",
     "restart": "npm run build && npm run dev",
     "lint": "tsc --noEmit",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "render-build": "npm install && npm run build",
+    "postinstall": "npm run build"
   },
   "keywords": [
     "typescript",
